@@ -8,6 +8,10 @@ cmake -B build
 cmake -build build
 ./file_name
 
+cpplint filename.cpp
+
+TODO: Add unit testing, install Gtest
+
 export MACOSX_DEPLOYMENT_TARGET=14.0
 
 Goal: https://github.com/savnani5/Depth-Estimation-using-Stereovision
