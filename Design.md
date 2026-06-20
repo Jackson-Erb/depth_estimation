@@ -18,15 +18,20 @@ i_feature_detector
     |
     '-> Interface that takes in a pixel and returns the pixel and a flag if it's a corner or not
 
+struct Pixel {
 
+
+
+}
 
 A function fast() that takes in a Pixel Coordinate and applies the fast algorithm, and returns a bool if its a corner or not.
 
 fast(){
         calculate_perimeter_brightness();
+
 }
 
-First  1, 5, 9, 13.
+First  1, 5, 9, 13. Then flag if a Corner or Not. If Yes, then run full test. 
 calculate_perimeter_brightness() {
     intensity = image(coordinates).intensity;
     p1_intensity = image(x, y-4);
@@ -34,3 +39,5 @@ calculate_perimeter_brightness() {
     p3_intensity = image(x, y+4);
     p4_intensity = image(x+4, y);
 }
+
+A drawing() method to draw the circles around the corners identified above.
