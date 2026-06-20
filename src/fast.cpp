@@ -6,6 +6,10 @@ using namespace std;
 
 int main() {
     Mat image = imread("assets/lemons.jpg", IMREAD_GRAYSCALE);
-    cout << "Success! " << endl;
+    
+    return 0;
+}
+
+int fast() {
     return 0;
 }
