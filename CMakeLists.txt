@@ -4,13 +4,13 @@ project(depth_estimation)
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-add_executable(fast)
+add_executable(Fast)
 
-target_sources(fast
+target_sources(Fast
   PRIVATE
-    fast.cpp
+    src/fast.cpp
 )
-
-target_link_libraries(OpenCV_Example ${OpenCV_LIBS})
+target_include_directories(Fast PRIVATE ${OpenCV_INCLUDE_DIRS})
+target_link_libraries(Fast ${OpenCV_LIBS})
 
 
