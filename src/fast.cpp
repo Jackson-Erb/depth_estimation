@@ -4,12 +4,34 @@ using namespace cv;
 using namespace std;
 
 int main() {
+
+    Fast test_image;
+
+    test_image.set_image("assets/church.jpg");
+    int counter = 0;
+    for (int i = 10; i < 1000; ++i) {
+        for (int j = 10; j < 1000; ++j) {
+            Pixel candidate_iter;
+            Pixel_Coordinate coord;
+            coord.x = j;
+            coord.y = i;
+            candidate_iter.coord = coord;
+            counter++;
+
+            test_image.is_corner(candidate_iter);
+        }
+    }
+    cout << "Pixels Counted:  " << counter << endl;
+    cout << "Number of Potential Candidates:  " << test_image.fast_candidates_.size() << endl;
+
     return 0;
 }
 
 void Fast::set_image(string file_name)
 {   
-    fast_image_ = imread("assets/lemons.jpg", IMREAD_GRAYSCALE);
+    fast_image_ = imread(file_name, IMREAD_GRAYSCALE);
+    rows_ = fast_image_.rows;
+    columns_ = fast_image_.cols;
 }
 
 Pixel Fast::is_corner(Pixel candidate)
@@ -25,6 +47,9 @@ bool Fast::fast_algo(Pixel candidate)
     if (!initial_verdict) {  // If Fails the first check, return. 
         return 0;
     }
+
+    fast_candidates_.push_back(initial_verdict);
+
     return 0;
 }
 
