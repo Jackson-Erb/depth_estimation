@@ -3,10 +3,13 @@
 
 using namespace cv;
 using namespace std;
+struct Pixel_Coordinate {
+    int x;
+    int y;
+};
 
 struct Pixel {
-    int x_pos;
-    int y_pos;
+    Pixel_Coordinate coord;
     double intensity;
     bool is_corner;
 };

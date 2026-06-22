@@ -19,3 +19,5 @@ Goal: https://github.com/savnani5/Depth-Estimation-using-Stereovision
 FAST: https://docs.opencv.org/3.4.20/df/d0c/tutorial_py_fast.html
 
 OpenCV Tutorials: https://docs.opencv.org/5.0/tutorials/tutorials.html
+
+OpenCV Matrix Datatypes: https://docs.opencv.org/5.0/tutorials/core/mat_the_basic_image_container/mat_the_basic_image_container.html 
